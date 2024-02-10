@@ -1,0 +1,35 @@
+<!-- Write a JavaScript function that accepts a string as a parameter and converts the first
+letter of each word of the string in upper case. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p3</title>
+  </head>
+
+  <body>
+    <label for="input1">Enter the string :</label><br />
+    <textarea name="textbox" id="input1" cols="30" rows="10"></textarea>
+    <button id="btn">convert</button>
+    <h3 id="output"></h3>
+
+    <script>
+      const input1 = document.getElementById("input1");
+      const btn = document.getElementById("btn");
+      const output1 = document.getElementById("output");
+      btn.addEventListener("click", () => {
+        const my_value = input1.value;
+        output1.innerHTML = converttouppercase(my_value);
+      });
+      function converttouppercase(str) {
+        return str
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+        //first converted the string into array and used the map() functin to iterate over the array and changed the first element
+        // into uppercase and with the + sign and the slice() function the uppercase and remaining string is concatenated.
+      }
+    </script>
+  </body>
+</html>

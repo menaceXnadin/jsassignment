@@ -1,0 +1,39 @@
+<!-- Write a JavaScript function that accepts a number as a parameter and check the number -->
+<!-- is prime or not. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p5</title>
+  </head>
+  <body>
+    <label for="box1">enter the number : </label>
+    <input type="text" name="primecheck" id="box1" />
+    <button id="btn">check</button>
+    <h3 id="output"></h3>
+
+    <script>
+      const input1 = document.getElementById("box1");
+      const btn = document.getElementById("btn");
+      const output1 = document.getElementById("output");
+
+      const checkprime = () => {
+        const int_value = parseInt(input1.value);
+
+        var count = 0;
+        for (let i = 1; i <= int_value; i++) {
+          if (int_value % i == 0) {
+            count++;
+          }
+        }
+        if (count == 2) {
+          output1.innerText = `${int_value} is prime`;
+        } else {
+          output1.innerText = `${int_value} is composite number`;
+        }
+      };
+      btn.addEventListener("click", checkprime);
+    </script>
+  </body>
+</html>

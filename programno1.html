@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p1</title>
+  </head>
+  <body>
+    <label for="integer">Enter the Number:</label>
+    <input type="text" id="integer" />
+    <h1 id="output"></h1>
+
+    <script>
+        const my_input = document.getElementById("integer");
+        const my_output = document.getElementById("output");
+        my_input.addEventListener("input", () => {
+            const num = my_input.value;
+            const reversedNum = ReverseNumber(num);
+            my_output.innerHTML = "Output: " + reversedNum;
+        });
+        const ReverseNumber = (num) => {
+          let result = num.split("").reverse().join(""); //function chaining
+          if (num < 0) {
+            result = "-" + result;
+          }
+          return parseInt(result);
+        };
+    </script>
+  </body>
+</html>
