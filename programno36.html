@@ -1,0 +1,49 @@
+<!-- read cookies -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read cookies</title>
+</head>
+<body>
+      <h1>Read cookies</h1>
+    <input type="button" value="setCookie" onclick="setCookie()" />
+    <input type="button" value="getCookie" onclick="getCookie()" />
+    <script>
+      function setCookie() {
+        var expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 7); // Cookie expires in 7 days
+        document.cookie =
+          "student=Giga Chad; expires=" +
+          expirationDate.toUTCString() +
+          "; path=/";
+        document.cookie =
+          "student2=Ram Chandra; expires=" +
+          expirationDate.toUTCString() +
+          "; path=/";
+      }
+
+      function getCookie() {
+        var cookieName = "student"; 
+        var cookieValue = null;
+
+        if (document.cookie.length !== 0) {
+          var cookies = document.cookie.split(";");
+
+          cookies.forEach(function (cookie) {
+            var parts = cookie.trim().split("=");
+            if (parts[0] === cookieName) {
+              cookieValue = parts[1];
+            }
+          });
+        }
+        if (cookieValue !== null) {
+          alert("Name = " + cookieName + " " + "Value = " + cookieValue);
+        } else {
+          alert("Cookie not available");
+        }
+      }
+    </script>
+  </body>
+</html>

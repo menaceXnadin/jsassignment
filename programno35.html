@@ -1,0 +1,32 @@
+<!-- Write a JavaScript program to Create a Cookie -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programno 35</title>
+  </head>
+  <body>
+    <h1>Creating a Cookie with JavaScript</h1>
+    <button id="btn">Create Cookie</button>
+    <script>
+      // Function to create a cookie
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        createCookie("user1", "Ram LImbu", 30);
+        createCookie("user_3", "Hari Regmi", 30);
+        createCookie("user_2", "Nadin Tamang", 30);
+      });
+      function createCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+          let date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+        alert("Cookie set successfully!");
+      }
+    </script>
+  </body>
+</html>

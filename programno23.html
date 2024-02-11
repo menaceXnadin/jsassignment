@@ -1,38 +1,58 @@
-<!-- Write a JavaScript program to show Event handler property -->
+<!-- Write a JavaScript program to show Event handler property. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Handler Property Demo</title>
+    <title>All Event Handlers Example</title>
   </head>
   <body>
-    <h2>Event Handler Property Demo</h2>
-
-    <button id="clickButton">Click me!</button>
-    <div
-      id="mouseOverDiv"
-      style="width: 200px; height: 100px; background-color: lightblue"
-    >
-      Mouse over me!
-    </div>
-    <input type="text" id="focusInput" placeholder="Focus here..." />
+    <h1>All Event Handlers</h1>
+    <button id="myButton">Click Me</button>
+    <form id="myForm">
+      <input type="text" id="textInput" placeholder="Type here..." />
+      <input type="submit" value="Submit" />
+    </form>
 
     <script>
-      // Click event handler property
-      document.getElementById("clickButton").onclick = function () {
-        console.log("Button clicked using event handler property!");
-      };
+      //functions for different  event handlers
+      function handleClick() {
+        alert("Button clicked!");
+      }
+      function handleMouseOver() {
+        console.log("Mouse over button");
+      }
 
-      // Mouseover event handler property
-      document.getElementById("mouseOverDiv").onmouseover = function () {
-        console.log("Mouse over the div using event handler property!");
-      };
+      function handleMouseOut() {
+        console.log("Mouse out of button");
+      }
 
-      // Focus event handler property
-      document.getElementById("focusInput").onfocus = function () {
-        console.log("Input focused using event handler property!");
-      };
+      function handleKeyDown(event) {
+        console.log("Key down: " + event.key);
+      }
+
+      function handleKeyUp(event) {
+        console.log("Key up: " + event.key);
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        console.log("Form submitted");
+      }
+
+      var button = document.getElementById("myButton");
+
+      button.onclick = handleClick;
+      button.onmouseover = handleMouseOver;
+      button.onmouseout = handleMouseOut;
+
+      var form = document.getElementById("myForm");
+
+      form.onkeydown = handleKeyDown;
+      form.onkeyup = handleKeyUp;
+
+      form.addEventListener("submit", handleSubmit);
     </script>
   </body>
 </html>

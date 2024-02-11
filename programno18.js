@@ -1,3 +1,4 @@
+// Write a JavaScript program in RegExp object such as exec(),toString() method.
 // Creating a regular expression object
 let regex = /\d+/; // Matches one or more digits
 
