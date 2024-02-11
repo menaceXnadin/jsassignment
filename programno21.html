@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Form Validation</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" />
+      <span id="username_error" class="error"></span><br />
+
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" />
+      <span id="password_error" class="error"></span><br />
+
+      <label>Education:</label><br />
+      <input type="checkbox" id="education_primary" name="education_primary" />
+      <label for="education_primary">SEE</label><br />
+      <input
+        type="checkbox"
+        id="education_secondary"
+        name="education_secondary"
+      />
+      <label for="education_secondary">+2</label><br />
+      <input type="checkbox" id="education_higher" name="education_higher" />
+      <label for="education_higher">Bachelor</label><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username.length < 4) {
+          showError("username", "Username must be at least 4 characters long");
+          return false;
+        } else {
+          showError("username", "");
+        }
+
+        if (!/^\d.*\$$/.test(password)) {
+          showError(
+            "password",
+            "Password must start with a digit and end with $"
+          );
+          return false;
+        } else {
+          showError("password", "");
+        }
+
+        return true;
+      }
+
+      function showError(field, message) {
+        document.getElementById(field + "_error").innerHTML = message;
+      }
+    </script>
+  </body>
+</html>

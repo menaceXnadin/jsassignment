@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form Creation</title>
+  </head>
+  <body>
+    <script>
+      // Create a form element
+      var form = document.createElement("form");
+
+      // Add attributes to the form
+      form.setAttribute("name", "registrationForm");
+      form.setAttribute("id", "registrationForm");
+
+      // Create and append input fields for each form field
+      var fields = ["username", "password", "email", "address", "phone_number"];
+      fields.forEach(function (field) {
+        var label = document.createElement("label");
+        label.setAttribute("for", field);
+        label.textContent = field.replace("_", " ").toUpperCase() + ": ";
+
+        var input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("name", field);
+        input.setAttribute("id", field);
+
+        // Create line breaks for better spacing
+        form.appendChild(label);
+        form.appendChild(input);
+        form.appendChild(document.createElement("br"));
+      });
+
+      // Create a submit button
+      var submitButton = document.createElement("input");
+      submitButton.setAttribute("type", "submit");
+      submitButton.setAttribute("value", "Submit");
+
+      // Append the submit button to the form
+      form.appendChild(submitButton);
+
+      // Append the form to the body of the HTML document
+      document.body.appendChild(form);
+    </script>
+  </body>
+</html>

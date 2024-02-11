@@ -1,0 +1,38 @@
+<!-- Write a JavaScript program to show Event handler property -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler Property Demo</title>
+  </head>
+  <body>
+    <h2>Event Handler Property Demo</h2>
+
+    <button id="clickButton">Click me!</button>
+    <div
+      id="mouseOverDiv"
+      style="width: 200px; height: 100px; background-color: lightblue"
+    >
+      Mouse over me!
+    </div>
+    <input type="text" id="focusInput" placeholder="Focus here..." />
+
+    <script>
+      // Click event handler property
+      document.getElementById("clickButton").onclick = function () {
+        console.log("Button clicked using event handler property!");
+      };
+
+      // Mouseover event handler property
+      document.getElementById("mouseOverDiv").onmouseover = function () {
+        console.log("Mouse over the div using event handler property!");
+      };
+
+      // Focus event handler property
+      document.getElementById("focusInput").onfocus = function () {
+        console.log("Input focused using event handler property!");
+      };
+    </script>
+  </body>
+</html>

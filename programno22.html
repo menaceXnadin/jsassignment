@@ -1,0 +1,44 @@
+<!-- Write a JavaScript program to use events such as clickevent(),mouseoverevent(),focusevent(). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Demo</title>
+  </head>
+  <body>
+    <h2>Event Handling Demo</h2>
+
+    <button id="clickButton">Click me!</button>
+    <div
+      id="mouseOverDiv"
+      style="width: 200px; height: 100px; background-color: lightblue"
+    >
+      Mouse over me!
+    </div>
+    <input type="text" id="focusInput" placeholder="Focus here..." />
+
+    <script>
+      // Click event
+      document
+        .getElementById("clickButton")
+        .addEventListener("click", function () {
+          alert("Button clicked!");
+        });
+
+      // Mouseover event
+      document
+        .getElementById("mouseOverDiv")
+        .addEventListener("mouseover", function () {
+          alert("Mouse over the div!");
+        });
+
+      // Focus event
+      document
+        .getElementById("focusInput")
+        .addEventListener("focus", function () {
+          alert("Input focused!");
+        });
+    </script>
+  </body>
+</html>
