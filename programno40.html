@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- using jquery -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    // jQuery code to execute after DOM is ready
+    $("#changeText").click(function(){
+        $("#demo").text("Text Changed using jQuery!");
+    });
+
+    $("#increaseTextSize").click(function(){
+        var currentSize = parseInt($("#demo").css("font-size"));
+        $("#demo").css("font-size", currentSize + 2 + "px");
+    });
+});
+</script>
+</head>
+<body>
+
+<h2>jQuery Example</h2>
+<p id="demo">This is some text.</p>
+<button id="changeText">Change Text</button>
+<button id="increaseTextSize">Increase Text Size</button>
+
+</body>
+</html>
