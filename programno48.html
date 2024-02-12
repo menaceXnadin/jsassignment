@@ -1,0 +1,86 @@
+<!-- Construct an HTML structure for a product showcase using semantic tags. Use the -->
+<!-- <section> tag to represent the main product section, with <article> tags for individual -->
+<!-- product descriptions. Include product images using <img> tags with appropriate alternate -->
+<!-- text and captions using <figcaption> tags. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Semantic Tags</title>
+    <style>
+      .product-section .products img {
+        min-width: 100px;
+        max-width: 200px;
+        max-height: 200px;
+        min-height: 200px;
+        object-fit: contain;
+        border: 2px solid black;
+      }
+      figure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .products {
+        border: 5px solid black;
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+      }
+      .product-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2vw;
+      }
+
+      header {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aquamarine;
+        margin-bottom: 5%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Product Details</h1>
+    </header>
+    <section class="product-section">
+      <article class="products">
+        <figure>
+          <img src="images/image1.png" alt="image of camera" />
+          <figcaption>Product-1:Camera</figcaption>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </figure>
+      </article>
+      <article class="products">
+        <figure>
+          <img src="images/image2.png" alt="image of apple vision pro" />
+          <figcaption>Product-2:Apple vision Pro</figcaption>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </figure>
+      </article>
+      <article class="products">
+        <figure>
+          <img src="images/image3.png" alt="image of apple iphone 15 pro max" />
+          <figcaption>Product-1:Iphone 15 pro Max</figcaption>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </figure>
+      </article>
+      <article class="products">
+        <figure>
+          <img src="images/image4.png" alt="image of power ranger bag" />
+          <figcaption>Product-1:Power Ranger bag</figcaption>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </figure>
+      </article>
+    </section>
+  </body>
+</html>
