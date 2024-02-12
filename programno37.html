@@ -9,7 +9,7 @@
   <body>
     <h1>Change Cookie Operations</h1>
     <button onclick="setCookie('username', 'john_doe', 30)">Set Cookie</button>
-    <button onclick="changeCookie('username', 'jane_doe')">
+    <button onclick="changeCookie('username', 'Menace_doe')">
       Change Cookie
     </button>
     <script>
@@ -23,7 +23,24 @@
         }
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
       }
+      function getCookie() {
+        var cookieName = "student";
+        var cookieValue = null;
 
+        if (document.cookie.length !== 0) {
+          var cookies = document.cookie.split(";");
+
+          cookies.forEach(function (cookie) {
+            var parts = cookie.trim().split("=");
+            if (parts[0] === cookieName) {
+              cookieValue = parts[1];
+            }
+          });
+        }
+        if (cookieValue == null) {
+          alert("Cookie not available");
+        }
+      }
       // Function to change a cookie's value
       function changeCookie(name, newValue) {
         // Check if the cookie exists

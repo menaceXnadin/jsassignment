@@ -9,6 +9,8 @@
   </head>
   <body>
     <h1>All Event Handlers</h1>
+    <button id="mouseover">Mouse over</button>
+
     <button id="myButton">Click Me</button>
     <form id="myForm">
       <input type="text" id="textInput" placeholder="Type here..." />
@@ -21,7 +23,7 @@
         alert("Button clicked!");
       }
       function handleMouseOver() {
-        console.log("Mouse over button");
+        alert("Mouse over button");
       }
 
       function handleMouseOut() {
@@ -44,7 +46,7 @@
       var button = document.getElementById("myButton");
 
       button.onclick = handleClick;
-      button.onmouseover = handleMouseOver;
+      document.getElementById("mouseover").onmouseover = handleMouseOver;
       button.onmouseout = handleMouseOut;
 
       var form = document.getElementById("myForm");

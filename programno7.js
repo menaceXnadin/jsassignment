@@ -18,4 +18,4 @@ function Second_Greatest_Lowest(arr_num) {
   return result.join(",");
 }
 
-console.log(Second_Greatest_Lowest([1, 2, 3, 4, 5]));
+console.log("Second lowest and greatest is "+Second_Greatest_Lowest([1, 2, 3, 4, 5]));

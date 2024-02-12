@@ -23,10 +23,8 @@
         let reversed_string = my_string.split("").reverse().join("");
         if (my_string == reversed_string) {
           new_element.innerHTML = `${reversed_string} == ${my_string}.so,pallindrome`;
-        } 
-        else {
-            new_element.innerHTML = `${reversed_string} != ${my_string}.so,not pallindrome`;
-
+        } else {
+          new_element.innerHTML = `${reversed_string} != ${my_string}.so,not pallindrome`;
         }
         document.querySelector("body").appendChild(new_element);
       };

@@ -1,0 +1,80 @@
+
+1
+Prepared by: Mr. Subash siwa  
+Practical on Unit 4: Client Side Scripting 
+1. Write a JavaScript function that reverse a number.  
+2. Write a JavaScript function that checks whether a passed string is palindrome or not?  
+3. Write a JavaScript function that accepts a string as a parameter and converts the first 
+letter of each word of the string in upper case.  ' 
+5. Write a JavaScript function that accepts a string as a parameter and counts the number of 
+vowels within the string.  
+6. Write a JavaScript function that accepts a number as a parameter and check the number 
+is prime or not.  
+ 7. Write a JavaScript function which accepts an argument and returns the type.   
+8. Write a JavaScript function which will take an array of numbers stored and find the 
+second lowest and second greatest numbers, respectively.  Sample array : [1,2,3,4,5] 
+9. Write a JavaScript function to check whether an `input` is an array or not  
+console.log(is_array('subash')); 
+console.log(is_array([1, 2, 4, 0])); 
+10. Write a simple JavaScript program to join all elements of the following array into a 
+string.   
+Sample array : myColor = ["Red", "Green", "White", "Black"]; 
+12. Write a JavaScript function to check whether an `input` is a date object or not. 
+13. Write a JavaScript function to check whether an `input` is a string or not 
+14.  Write a JavaScript program to list the properties of a JavaScript object.  
+ Sample object: 
+var student = { 
+name : "David Rayy", 
+sclass : "VI", 
+rollno : 12 }; 
+15. Write a JavaScript program to delete the rollno property from the following object. 
+Also print the object before or after deleting the property.   
+Sample object: 
+var student = { 
+name : "David Rayy", 
+sclass : "VI", 
+rollno : 12 }; 
+16. Write a JavaScript program to get the length of a JavaScript object.   
+Sample object : 
+var student = { 
+Prepared by: Mr. Subash siwa  
+name : "David Rayy", 
+sclass : "VI", 
+rollno : 12 }; 
+17. Write a JavaScript program of  window object such as alert(), 
+prompt(),confirm(),open(),close() 
+18. Write a JavaScript program in String object  1)By string literal 
+2)By string object (using new keyword) 
+20. Write a JavaScript program  in Boolean object such as toString, valueof. 
+21. Write a JavaScript program  in  RegExp  object such as exec(),toString() method. 
+22. Write a JavaScript program to create a form using following fields: 
+       a.user name b.password c.email d.address e.phone_number 
+23.Create a HTML form with fields like username, password, email, country. The 
+username should be textbox, password and email should be the password and email fields. 
+The country should be drop down. Now write JavaScript function for form validation.Your 
+function should validate the username to be of length 5, password should start with digit and 
+should be alphanumeric. The email should be valid. The country field should be selected. 
+24. Write HTML Script for creating a form containing text box for username, password 
+field for password, and checkbox for Education fields. Write a JavaScript function for the 
+validation of the form for all of the fields as required. In addition length of username should 
+at least 4, the password should start with digit and end with $. 
+25. Write a JavaScript program to use events such as clickevent(),mouseoverevent0,focusevent(). 
+26. Write a JavaScript program to show Event handler property. 
+27. Write a JavaScript program to use of error handling mechanism using: 
+       a)try-catch-finally  block 
+      b)try-throw-catch 
+         28. Write a JavaScript program to Create a Cookie. 
+         29.Write a JavaScript program to Read a Cookie. 
+         30. Write a JavaScript program to Change a Cookie. 
+         31. Write a JavaScript program to Delete a Cookie. 
+         32. Write a JavaScript program to use of AJAX. 
+    33. Write a JavaScript program to use of JQUERY. 
+     34.Write a HTML script containing use of media query for changing the background-color of 
+html page to black if the viewport is 600 pixels wide or more than that otherwise if the 
+viewport is less than 500 pixels, the background-color should be changed to red. 
+ 
+   35.Write a program to show jQuery Selectors. 
+ 
+    36. How positioning of HTML elements can be done using CSS? Create a HTML page with a 
+div with some content and two paragraph with some contents having id p1 and p2. Write 
+external CSS for the div tag having fixed position with border style solid and width 2 px. the 

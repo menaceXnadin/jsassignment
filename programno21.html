@@ -1,7 +1,3 @@
-<!-- Write HTML Script for creating a form containing text box for username, password -->
-<!-- field for password, and checkbox for Education fields. Write a JavaScript function for the -->
-<!-- validation of the form for all of the fields as required. In addition length of username should -->
-<!-- at least 4, the password should start with digit and end with $ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,15 +23,11 @@
       <span id="password_error" class="error"></span><br />
 
       <label>Education:</label><br />
-      <input type="checkbox" id="education_primary" name="education_primary" />
+      <input type="checkbox" class="education" name="education_primary" />
       <label for="education_primary">SEE</label><br />
-      <input
-        type="checkbox"
-        id="education_secondary"
-        name="education_secondary"
-      />
+      <input type="checkbox" class="education" name="education_secondary" />
       <label for="education_secondary">+2</label><br />
-      <input type="checkbox" id="education_higher" name="education_higher" />
+      <input type="checkbox" class="education" name="education_higher" />
       <label for="education_higher">Bachelor</label><br />
 
       <input type="submit" value="Submit" />
@@ -43,27 +35,28 @@
 
     <script>
       function validateForm() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
 
-        if (username.length < 4) {
-          showError("username", "Username must be at least 4 characters long");
+        showError(
+          "username",
+          username.length < 4
+            ? "Username must be at least 4 characters long"
+            : ""
+        );
+        showError(
+          "password",
+          !/^\d.*\$$/.test(password)
+            ? "Password must start with a digit and end with $"
+            : ""
+        );
+
+        if (username.length < 4 || !/^\d.*\$$/.test(password)) {
           return false;
         } else {
-          showError("username", "");
+          alert("Form submitted properly");
+          return true;
         }
-
-        if (!/^\d.*\$$/.test(password)) {
-          showError(
-            "password",
-            "Password must start with a digit and end with $"
-          );
-          return false;
-        } else {
-          showError("password", "");
-        }
-
-        return true;
       }
 
       function showError(field, message) {

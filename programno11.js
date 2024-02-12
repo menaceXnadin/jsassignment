@@ -5,7 +5,7 @@ function is_string(value) {
         return `yes,it is a ${typeof value}`;
     }
     else {
-        return false;
+        return false+" NOT A STRING";
         
     }
 
